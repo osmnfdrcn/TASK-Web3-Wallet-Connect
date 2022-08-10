@@ -1,7 +1,9 @@
 import { useWeb3React } from '@web3-react/core';
-
 import { useEffect, useState } from "react";
-import Modal from '../components/Modal'
+import Button from '../components/Button/Button';
+import Modal from '../components/Modal/Modal'
+import Title from '../components/Title/Title';
+import Text from '../components/Text/Text';
 
 // MetaMask ve Coinbase, her ikisi de “injected” ethereum providerlari kullandigindan, ikisinin ayni browserda kurulu olmasi durumunda, hangisi secilirse secilsin ayni address'i gosteriyor.
 
@@ -40,23 +42,17 @@ export const Home = ({ className }) => {
 
   return (
     <div className="container">
+
       {showModal &&
         <Modal
           setConnector={setConnector}
         />}
 
       <div className="info-area">
-        <h1>Connect your Wallet</h1>
-        <button onClick={() => {
-          active
-            ? disconnect()
-            : setShowModal(true)
-        }}>
-          {active ? 'DISCONNECT' : 'CONNECT'}
-        </button>
-        <p> {active ? 'connected' : 'not connected'}</p>
-        <p>{account}</p>
-
+        <Title text={"Connect Your Wallet"} />
+        <Button active={active} disconnect={disconnect} setShowModal={setShowModal} />
+        <Text text={active ? 'connected' : 'not connected'} />
+        <Text text={account} />
       </div>
 
     </div>
