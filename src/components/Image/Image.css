@@ -1,0 +1,10 @@
+.image-container {
+  cursor: pointer;
+  width: 80%;
+}
+.image-container img {
+  width: 100%;
+  object-fit: cover;
+  display: block;
+  height: 100%;
+}

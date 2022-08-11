@@ -1,6 +1,7 @@
 import { Coinbase, metaMaskConnector, WalletConnect } from '../../connectors'
 import { metaMaskImage, coinBaseImage, walletConnectImage } from '../../assets/images'
 import Image from '../Image/Image'
+import './Modal.css'
 
 const Modal = ({ setConnector }) => {
   return (

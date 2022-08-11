@@ -1,6 +1,6 @@
 import { Web3ReactProvider } from '@web3-react/core';
 import Web3 from 'web3';
-import Home from './pages/Home';
+import Home from './pages/Home/Home';
 
 const getLibrary = (provider) => {
   const library = new Web3(provider)

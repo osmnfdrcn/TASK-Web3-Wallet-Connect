@@ -1,0 +1,15 @@
+button {
+  cursor: pointer;
+  color: #000;
+  background: #fff;
+  border: 1px solid #d9e2ec;
+  letter-spacing: 5px;
+  padding: 10px 20px;
+  transition: 0.3s ease-in-out all;
+  text-transform: capitalize;
+  display: inline-block;
+  margin-bottom: 20px;
+}
+button:hover{
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.2);
+}

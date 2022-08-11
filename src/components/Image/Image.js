@@ -1,3 +1,5 @@
+import './Image.css'
+
 const Image = (props) => {
   const { connector, setConnector, image, alt } = props
   return (

@@ -1,3 +1,5 @@
+import './Text.css'
+
 const Text = ({ text }) => {
   return (
     <p> {text}</p>

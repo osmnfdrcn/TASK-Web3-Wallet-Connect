@@ -1,11 +1,14 @@
 import { useWeb3React } from '@web3-react/core';
 import { useEffect, useState } from "react";
-import Button from '../components/Button/Button';
-import Modal from '../components/Modal/Modal'
-import Title from '../components/Title/Title';
-import Text from '../components/Text/Text';
+import Button from '../../components/Button/Button';
+import Modal from '../../components/Modal/Modal'
+import Title from '../../components/Title/Title';
+import Text from '../../components/Text/Text';
+import './Home.css'
 
-// MetaMask ve Coinbase, her ikisi de “injected” ethereum providerlari kullandigindan, ikisinin ayni browserda kurulu olmasi durumunda, hangisi secilirse secilsin ayni address'i gosteriyor.
+// ISSUE
+// in case of metamask abd coinbase are installed on same browser, regardless of which one's chosen, same address's shown.
+// probably because of both are "injected",
 
 export const Home = ({ className }) => {
   const [connector, setConnector] = useState(null)
