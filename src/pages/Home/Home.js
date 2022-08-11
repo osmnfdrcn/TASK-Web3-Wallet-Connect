@@ -18,12 +18,22 @@ export const Home = ({ className }) => {
     active,
     account,
     connect,
+    hideModal
   } = useAppContext();
+
+  // const divEl = window.querySelector(".container")
+
 
   useEffect(() => {
     connect(connector)
     // eslint-disable-next-line
   }, [connector])
+  useEffect(() => {
+    window.addEventListener("click", () => hideModal())
+    return () => {
+      window.addEventListener("click", () => hideModal())
+    }
+  })
 
   return (
     <div className="container">

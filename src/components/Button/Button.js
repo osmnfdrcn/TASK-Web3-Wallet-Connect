@@ -4,7 +4,8 @@ import { useAppContext } from '../../context/appContext';
 const Button = () => {
   const { showModal, active, disconnect } = useAppContext();
   return (
-    <button onClick={() => {
+    <button onClick={(e) => {
+      e.stopPropagation()
       active
         ? disconnect()
         : showModal()
