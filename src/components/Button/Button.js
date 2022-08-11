@@ -1,11 +1,13 @@
 import './Button.css'
+import { useAppContext } from '../../context/appContext';
 
-const Button = ({ active, disconnect, setShowModal }) => {
+const Button = () => {
+  const { showModal, active, disconnect } = useAppContext();
   return (
     <button onClick={() => {
       active
         ? disconnect()
-        : setShowModal(true)
+        : showModal()
     }}>
       {active ? 'DISCONNECT' : 'CONNECT'}
     </button>

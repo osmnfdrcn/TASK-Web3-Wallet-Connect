@@ -3,12 +3,13 @@ import { metaMaskImage, coinBaseImage, walletConnectImage } from '../../assets/i
 import Image from '../Image/Image'
 import './Modal.css'
 
-const Modal = ({ setConnector }) => {
+const Modal = () => {
+
   return (
     <section className="modal-container">
-      <Image setConnector={setConnector} connector={metaMaskConnector} image={metaMaskImage} alt={"MetaMask"} />
-      <Image setConnector={setConnector} connector={Coinbase} image={coinBaseImage} alt={"Coin Base"} />
-      <Image setConnector={setConnector} connector={WalletConnect} image={walletConnectImage} alt={"Wallet Connect"} />
+      <Image connector={metaMaskConnector} image={metaMaskImage} alt={"MetaMask"} />
+      <Image connector={Coinbase} image={coinBaseImage} alt={"Coin Base"} />
+      <Image connector={WalletConnect} image={walletConnectImage} alt={"Wallet Connect"} />
     </section>
   )
 }
